@@ -86,7 +86,31 @@ main p > a:hover {
 }
 
 /* FOOTER */
-    
+footer.container {
+    padding-top: 0;
+}
+footer.container .socials {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+}
+footer.container .socials > a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin: 2px;
+    font-size: 20px;
+    line-height: 36px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+footer.container .socials > a:hover {
+    background-color: #fff;
+    color: #038FCF;
+}
 footer img {
     display: inline-block;
     height: 40px;
@@ -126,4 +150,12 @@ footer .description {
 }
 footer > p > a {
     color: #fff;
+}
+@media (max-width: 700px) {
+    footer .bottom-texts > p {
+        width: 100%;
+    }
+    footer .bottom-texts > p::before {
+        display: none;
+    }
 }
