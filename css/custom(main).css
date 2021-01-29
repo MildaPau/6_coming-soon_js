@@ -1,3 +1,4 @@
+/* COMON STYLE */
 .bg-blue {
     background-color: #038FCF;
 }
@@ -83,5 +84,78 @@ main p > a:hover {
         width: 100%;
     }
 }
-    
 
+/* FOOTER */
+footer.container {
+    padding-top: 0;
+}
+footer.container .socials {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+}
+footer.container .socials > a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin: 2px;
+    font-size: 20px;
+    line-height: 36px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+footer.container .socials > a:hover {
+    background-color: #fff;
+    color: #038FCF;
+}
+footer img {
+    display: inline-block;
+    height: 40px;
+    margin-bottom: 30px;
+}
+footer .bottom-texts {
+    display: inline-block;
+    width: 100%;
+    color: #fff8;
+}
+footer .bottom-texts > p {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 30px;
+    position: relative;
+}
+footer .bottom-texts > p::before {
+    content: '';
+    display: inline-block;
+    width: 2px; 
+    height: 16px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    transform: translate(0, -50%);
+}
+footer .bottom-texts > p:first-of-type::before{
+    display: none;
+    
+}
+footer .description {
+    display: inline-block;
+    width: 100%;
+    color: #fff8;
+    line-height: 30px;
+}
+footer > p > a {
+    color: #fff;
+}
+@media (max-width: 700px) {
+    footer .bottom-texts > p {
+        width: 100%;
+    }
+    footer .bottom-texts > p::before {
+        display: none;
+    }
+}
