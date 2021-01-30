@@ -1,32 +1,40 @@
 .mouse{
     display: inline-block;
-    width: 160px;
-    height: 260px;
-    border: 20px solid #fff;
-    border-radius: 80px;
+    width: 28px;
+    height: 40px;
+    border: 4px solid #fff;
+    border-radius: 14px;
 }
 .mouse > .wheel{
     display: inline-block;
-    width: 20px;
-    height: 30px;
+    width: 4px;
+    height: 6px;
     background-color: #fff;
-    margin-top: 50px;
+    margin-top: 7px;
     animation-name: mouseMove;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-duration: 2s; /* trukme */
+    animation-iteration-count: infinite; /* kiek kartu pasikartoja */
+    animation-timing-function: ease; /* animacijos tempas */
+    animation-delay: 1s; /* kiek laiko lauki kol prasideda animacija pirma karta */
+    animation-fill-mode: forwards; /* kur stovi dizainas kai baigiasi animacja */
+    animation-direction: ; /* animacijos kryptys */
+    animation-play-state: ; /* jeigu pauze, tai sustabdyta iliustracija
+                                pvz. hover */
 }
 
 @keyframes mouseMove {
     /* % yra laikas */
     0% { 
         background-color: #fff;
-        margin-top: 50px;
+        margin-top: 7px;
+        /* ransform: rotate(0deg) */
     }
     30% {
         background-color: #fff;
     }
     100% {
         background-color: #fff0;
-        margin-top: 140px;
+        margin-top: 18px;
+        /* ransform: rotate(720deg) */
     }
 }
