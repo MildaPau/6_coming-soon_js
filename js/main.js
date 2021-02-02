@@ -10,6 +10,7 @@ import {progressBarData} from '../js/data/progressBarData.js';
 
 // FUNKCIJAI PERDUOTI DUOMENIS
 clock('.clock','12-14 18:00:00');
+//clock('.clock','pomidoras');
 renderSocials('footer > .socials', socialsData);
 renderProgressBars('.left-column', progressBarData);
 

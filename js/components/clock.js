@@ -6,7 +6,8 @@ function clock(selector, deadline) {
         return false;
     }
     if (typeof deadline !== 'string' ||
-    deadline === '') {
+    deadline === '' ||
+    !isFinite((new Date('2000-' + deadline).getTime()))) {
         console.error('ERROR: netinkamo formato deadlinas.');
         return false;
     }
@@ -31,7 +32,7 @@ function clock(selector, deadline) {
     for (let i = 0; i < 4; i++) {
         const key = labels[i];
         HTML += `<div class="time">
-            <div class="value">${numbers[key]}</div>
+            <div class="value">${formatNumber(numbers[key])}</div>
             <div class=label">${key}</div>
         </div>`;
     }
@@ -56,7 +57,7 @@ function clock(selector, deadline) {
        numbers = updateClock(deadline);
        for (let i = 0; i < 4; i++) {
            const key = labels[i];
-           allValueDOM[i].innerText = numbers[key];
+           allValueDOM[i].innerText = formatNumber(numbers[key]);
        }
     }, 1000)
 
@@ -97,6 +98,11 @@ function clock(selector, deadline) {
             seconds
        };
     }
+}
+
+// kai skicius vienazenklis, tai pries ji rasoma 0
+function formatNumber(number) { 
+    return number < 10 ? '0' + number : number;
 }
 
 export { clock }
