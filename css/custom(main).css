@@ -38,10 +38,19 @@
 }
 
 .hero .clock {
-    margin-bottom: 60px;
+    margin-bottom: 140px;
 }
 .hero form {
     margin-bottom: 20px;
+}
+.hero form input{
+    background-color: transparent;
+    color: #fff;
+    border-bottom-color: #fff;
+}
+.hero form input::placeholder {
+    color: #fff;
+    font-style: italic;
 }
 
 /* MAIN */
@@ -100,12 +109,15 @@ footer.container .socials > a {
     width: 36px;
     height: 36px;
     margin: 2px;
-    font-size: 20px;
+    font-size: 0px; 
     line-height: 36px;
     color: #fff;
     text-decoration: none;
     border-radius: 50%;
     transition: all 0.5s;
+}
+footer.container .socials > a::before { /*pseudo elemento ikonos matomos*/
+    font-size: 20px;
 }
 footer.container .socials > a:hover {
     background-color: #fff;
