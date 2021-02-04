@@ -51,7 +51,7 @@ function clock(selector, deadline) {
             //zymiai efektyvesne paieska, nes pradeda nuo jau zinomos artimiausios tinkamos vietos
     
     const allValueDOM = DOM.querySelectorAll('.value');
-    console.log(allValueDOM);
+    /*console.log(allValueDOM);*/
 
     setInterval( function () {
        numbers = updateClock(deadline);

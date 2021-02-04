@@ -40,7 +40,7 @@ function renderSocials(selector, data){
         }
 
         HTML += `<a href="${item.href}" target="_blank" class="fa fa-${item.icon}">${item.icon}</a>`;
-        console.log(item);
+        /*console.log(item);*/
     }
 
     // post logic validation
